@@ -208,3 +208,19 @@ h1 {
     justify-content: space-between;
 
 }
+
+.nav-menu-icon {
+    width: 24px;
+    float: right;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.nav-menu-icon {
+
+    height: 2px;
+    background-color: #242d2c;
+}
