@@ -228,6 +228,11 @@ h2 {
     gap: 5px;
 }
 
+.container-nav svg {
+    width: 24px;
+    display: none;
+}
+
 .nav-menu-icon {
     width: 24px;
     float: right;
@@ -270,6 +275,6 @@ h2 {
     height: 200px;
 }
 
-.info-img img {
-    width: 100%;
+.info-img svg {
+    background-size: cover;
 }
