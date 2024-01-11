@@ -280,9 +280,19 @@ h2 {
 
 .line1 {
     background-color: var(--color--primary); 
-    height: 90px; 
+    height: 100px; 
     width: 100%;
+    display: flex;
 }
+
+.line1 h4 {
+
+    animation-name: desplazar;
+    animation-duration: 10s;
+
+    transition: all .2s;
+}
+
 
 .container-suggest {
     width: 100%;
@@ -336,24 +346,30 @@ h2 {
     background-color: var(--color--background1);
 }
 
-.container-suggest__item__img h4 {
-    animation-name: desplazar;
-    animation-duration: 10s;
-
-    transition: all .2s;
-}
-
 .container-suggest__item__img.actuaciones {
     background-color: var(--color--tertiary);
 }
 
 .container-suggest__item__img.eventos {
     background-color: var(--color--primary);
+    display: flex;
+    overflow: hidden;
 }
 
-.container-suggest__item__img svg {
-    background-size: cover;
+.slider-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transform: translateX();
+
+    transition: 5s;
 }
+
+.slider-img {
+    width: 100%;
+    object-fit: cover;
+}
+
 
 .line2 {
     background-color:var(--color--background1); 
