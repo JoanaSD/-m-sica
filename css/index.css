@@ -180,28 +180,26 @@ h1 {
 
 h2 {
 
-    font-size:15px;
+    font-size:20px;
     font-weight: 600;
     letter-spacing: 3px;
 }
 
-@keyframes desplazar {
-    from {
-        transform: translateX(0rem)
-    }
-    to {
-        transform: translateX(10rem);
-    }
+h4 {
 
+    font-size:15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-variant: small-caps;
 }
 
 .container-nav {
     width: 100%;
-    height: 70px;
+    max-height: 80px;
     align-items: center;
     justify-content: right;
-    gap: calc(42%);
-    padding: 0 26px;
+    gap: calc(45%);
+    padding: 15px 26px;
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -228,7 +226,7 @@ h2 {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    max-height: 50px;
+    max-height: 80px;
 
 }
 
@@ -270,27 +268,30 @@ h2 {
     color: var(--main-light);
 }
 
-.active{
-    display: flex;
-    position: fixed;
-    top: 70px;
-    width: 100vw;
+.container-pop-up__item li:hover {
+    color: #F2CB05;
 }
 
+.active {
+    display: flex;
+    position: fixed;
+    top: 100px;
+    width: 100vw;
+}
 
 .line1 {
     background-color: var(--color--primary); 
     height: 100px; 
     width: 100%;
     display: flex;
+    align-items: end;
+    padding: 0 0 5px 0;
 }
 
 .line1 h4 {
-
-    animation-name: desplazar;
-    animation-duration: 10s;
-
-    transition: all .2s;
+    bottom: 0px;
+    color: var(--main-light);
+    font-weight: 300;
 }
 
 
@@ -315,7 +316,7 @@ h2 {
 
 .container-suggest__item__tittle {
     width: 100%;
-    min-height: 50px;
+    min-height: 80px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -339,7 +340,7 @@ h2 {
 
 .container-suggest__item__img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     display: flex;
     overflow: hidden;
     flex-direction: row;
@@ -363,7 +364,7 @@ h2 {
 
 .slider-img {
     width: 100%;
-    object-fit: cover;
+    width: 100%;
 }
 
 
@@ -373,3 +374,28 @@ h2 {
     width: 100%;
 }
 
+.container-filters {
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--color--primary);
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-filters__select {
+    border: none;
+    background-color: var(--color--primary);
+    color: var(--main-light);
+    height: fit-content;
+}
+
+.container-filters__select option {
+    font-style: none;
+}
+
+.container-filters__select option:hover {
+    background-color: var(--main-dark);
+}

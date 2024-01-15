@@ -19,7 +19,7 @@ let sliderActual= 0;
 
 // - Funciones
 
-setTimeout ( () => {
+setInterval ( () => {
 // -- Creamos un intervalo con una función arrow.
 
     while (sliderActual < sliderImg.length - 1) {
@@ -35,3 +35,7 @@ setTimeout ( () => {
 
 }, 5000) 
 // -- Le damos un tiempo de ejecución al intervalo, por ejemplo: 5000ms
+
+window.addEventListener('load', ()  => {
+    sliderActual = 1; 
+})
