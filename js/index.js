@@ -6,10 +6,10 @@ function popup(){
 
 // - Variables
 
-let sliderImg = document.querySelectorAll(".slider-img.acuaciones");
+let sliderImg = document.querySelectorAll(".slider-img");
 // -- Guardamos en una variable todos los elementos img que darán como valor una array.
 
-let sliderInner = document.querySelector(".slider-inner.actuaciones");
+let sliderInner = document.querySelector(".container-suggest__item__img");
 // -- Guardamos en una variable el contenedor de las imágenes para moverlo posteriormente.
 
 let sliderActual= 0;
@@ -22,7 +22,7 @@ let sliderActual= 0;
 setTimeout ( () => {
 // -- Creamos un intervalo con una función arrow.
 
-    if (sliderActual < sliderImg.length - 1) {
+    while (sliderActual < sliderImg.length - 1) {
     // --- Si el valor del slider actual es menor que la cantidad de img almacenadas en la variable -1:
         sliderActual++;
         // ---- Aumenta el valor del slider actual.
@@ -31,16 +31,7 @@ setTimeout ( () => {
         sliderInner.style.transform = `translateX(${calculo}vw)`;
         // ---- Modificamos el atributo style del contenedor de las imágenes agregandole un transform translateX con el valor de la variable anterior. Le añadimos la medida al final del resultado, por ejemplo vw.
 
-    } else if (sliderActual == sliderImg.length -1) {
-        // --- Si no es menor, pero si es el valor del slider actual igual que la cantidad de img almacenadas en la variable -1:
-
-        sliderActual = 0;
-        // ---- El valor del slider actual pasa a 0.
-        let calculo = sliderActual * -100;
-        // ---- Se declara una variable para hacer un cálculo que multiplique el slider actual por -100.
-        sliderInner.style.transform = `translateX(${calculo}vw)`;
-        // ---- Modificamos el atributo style del contenedor de las imágenes agregandole un transform translateX con el valor de la variable anterior. Le añadimos la medida al final del resultado, por ejemplo vw.
     }
 
-}, 1000) 
+}, 5000) 
 // -- Le damos un tiempo de ejecución al intervalo, por ejemplo: 5000ms
