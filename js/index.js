@@ -4,6 +4,8 @@ function popup(){
     menu.classList.toggle("active");
 }
 
+
+
 // - Variables
 
 let sliderImg = document.querySelectorAll(".slider-img");
