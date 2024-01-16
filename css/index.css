@@ -198,7 +198,7 @@ h4 {
     max-height: 80px;
     align-items: center;
     justify-content: right;
-    gap: calc(45%);
+    gap: calc(43%);
     padding: 15px 26px;
     display: flex;
     flex-direction: row;
@@ -286,7 +286,7 @@ h4 {
 .active {
     display: flex;
     position: fixed;
-    top: 100px;
+    top: 110px;
     width: 100vw;
 }
 
@@ -303,6 +303,15 @@ h4 {
     bottom: 0px;
     color: var(--main-dark);
     font-weight: 300;
+}
+
+.line1.contrata {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--color--tertiary);
 }
 
 
