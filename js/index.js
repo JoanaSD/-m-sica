@@ -4,13 +4,23 @@ function popup(){
     menu.classList.toggle("active");
 }
 
+
+let actuaciones = document.querySelector(".container-pop-up__actuaciones");
+let order1 = document.querySelector(".container-suggest__item.actuaciones")
+
+function popupActuaciones(){
+    actuaciones.classList.toggle("active__actuaciones");
+    order1.classList.add("order__actuaciones");
+}
+
 let eventos = document.querySelector(".container-pop-up__eventos");
-let order = document.querySelector(".container-suggest__item.eventos")
+let order2 = document.querySelector(".container-suggest__item.eventos")
 
 function popupEventos(){
     eventos.classList.toggle("active__eventos");
-    order.classList.add("order__eventos");
+    order2.classList.add("order__eventos");
 }
+
 
 
 

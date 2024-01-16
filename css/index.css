@@ -378,6 +378,53 @@ h4 {
     width: 100%;
 }
 
+.container-pop-up__actuaciones {
+    display: none;
+
+}
+
+.close__actuaciones {
+    position: fixed;
+    top: 170px;
+    left: 1170px;
+    z-index: 100px;
+}
+
+.active__actuaciones {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.item-pop-up__actuaciones ul {
+    max-width: 50%;
+    min-height: 220px;
+    background-color: var(--main-light);
+    list-style: none;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px 0px 0px 30px;
+    padding: 30px;
+
+}
+
+.item-pop-up__actuaciones ul li h2 {
+    color: var(--color--primary);
+}
+
+.order__actuaciones {
+    order: 0;
+}
+
+.container-pop-up__actuaciones button {
+    color: var(--main-light);
+    background-color: var(--main-dark);
+    border-radius: 10px;
+}
 
 
 .container-pop-up__eventos {
