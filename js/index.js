@@ -4,6 +4,14 @@ function popup(){
     menu.classList.toggle("active");
 }
 
+let eventos = document.querySelector(".container-pop-up__eventos");
+let order = document.querySelector(".container-suggest__item.eventos")
+
+function popupEventos(){
+    eventos.classList.toggle("active__eventos");
+    order.classList.add("order__eventos");
+}
+
 
 
 // - Variables
