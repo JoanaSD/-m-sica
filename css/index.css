@@ -255,6 +255,7 @@ h4 {
 
 .container-popup{
     display: none;
+    transition: 2s ease-in-out;
 }
 
 .container-pop-up__item{
@@ -395,6 +396,11 @@ h4 {
     gap: 20px;
 }
 
+.container-filters form {
+    appearance: none;
+    font-family: inherit;
+}
+
 .container-filters__select {
     border: none;
     background-color: var(--color--primary);
@@ -404,6 +410,7 @@ h4 {
 
 .container-filters__select option {
     font-style: none;
+    appearance: none;
 }
 
 .container-filters__select option:hover {
