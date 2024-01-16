@@ -206,7 +206,7 @@ h4 {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--color--secondary);
+    background-color: var(--main-dark);
 }
 
 .container-nav h1 {
@@ -380,7 +380,7 @@ h4 {
 
 .line2 {
     background-color:var(--color--background1); 
-    height: 20px; 
+    height: 30px; 
     width: 100%;
 }
 
@@ -408,4 +408,41 @@ h4 {
 
 .container-filters__select option:hover {
     background-color: var(--main-dark);
+}
+
+.container-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-info div {
+    min-width: 350px;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 10px;
+    gap:15px;
+}
+
+.container-info .container-info__titlle {
+    background-color: var(--main-dark);
+    color: var(--main-light);
+    text-align: center;
+}
+
+.container-info .container-info__info-img {
+    background-color: var(--main-light);
+    color: var(--main-dark);
+}
+
+.container-info .info-img {
+    width: 32px;
 }
