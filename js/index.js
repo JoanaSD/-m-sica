@@ -1,7 +1,9 @@
 let menu = document.querySelector(".container-popup");
+let menuIcon = document.querySelector(".container-nav__item")
 
 function popup(){
     menu.classList.toggle("active");
+    menuIcon.classList.toggle("close");
 }
 
 

@@ -269,6 +269,8 @@ h4 {
     color: var(--main-light);
 }
 
+
+
 .container-pop-up__item li svg {
 
     width: 32px;
@@ -348,12 +350,12 @@ h4 {
     color: var(--color--background1);
 }
 
-.container-suggest__item__tittle.actuaciones {
+.container-suggest__item__tittle.actuaciones, .container-suggest__item__tittle.musico1  {
     background-color: var(--color--secondary); 
     color: var(--color--primary);
 }
 
-.container-suggest__item__tittle.eventos {
+.container-suggest__item__tittle.eventos, .container-suggest__item__tittle.musico2  {
     background-color: var(--color--background2); 
     color: var(--color--tertiary);
 }
@@ -368,6 +370,7 @@ h4 {
     transform: translateX();
 
     transition: 5s;
+
 }
 
 .container-suggest__item__img.populares {
@@ -471,7 +474,7 @@ h4 {
 }
 
 .order__eventos {
-    order: 0;
+    order: 2;
 }
 
 .container-pop-up__eventos button {
