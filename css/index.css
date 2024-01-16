@@ -268,8 +268,18 @@ h4 {
     color: var(--main-light);
 }
 
+.container-pop-up__item li svg {
+
+    width: 32px;
+    stroke: var(--main-light);
+}
+
+.container-pop-up__item li svg:hover {
+    stroke: var(--color--tertiary);
+}
+
 .container-pop-up__item li:hover {
-    color: #F2CB05;
+    color: var(--color--tertiary);
 }
 
 .active {
