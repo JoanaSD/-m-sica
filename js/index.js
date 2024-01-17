@@ -1,5 +1,6 @@
-let menu = document.querySelector(".container-popup");
-let menuIcon = document.querySelector(".container-nav__item")
+/*funcion para activar el pop up del menu desplegable */
+let menu = document.querySelector(".container__popup");
+let menuIcon = document.querySelector(".container__nav__item")
 
 function popup(){
     menu.classList.toggle("active");
@@ -7,57 +8,102 @@ function popup(){
 }
 
 
-let actuaciones = document.querySelector(".container-pop-up__actuaciones");
-let order1 = document.querySelector(".container-suggest__item.actuaciones")
+/*funcion para activar el movimiento vertical de la imagen del div LOS MAS POPULARES al cargar la pagina */
+let img1 = document.querySelector(".container__suggest__item__img.populares");
+
+function moveImg1() {
+
+    setTimeout ( () => {
+        img1.style.transform = "translateY(-5rem)";
+    }, 500 )
+
+    setTimeout ( () => {
+        img1.style.transform = "translateY(5rem)";
+    }, 1000 )
+
+    setTimeout ( () => {
+        img1.style.transform = "translateY(-0rem)";
+    }, 1500 )
+
+}
+
+moveImg1();
+
+
+/*funcion para activar el movimiento vertical de la imagen del div ULTIMAS INCORPORACIONES al cargar la pagina */
+let img2 = document.querySelector(".container__suggest__item__img.actuaciones");
+
+function moveImg2() {
+
+    setTimeout ( () => {
+        img2.style.transform = "translateY(-5rem)";
+    }, 500 )
+
+    setTimeout ( () => {
+        img2.style.transform = "translateY(5rem)";
+    }, 1000 )
+
+    setTimeout ( () => {
+        img2.style.transform = "translateY(-0rem)";
+    }, 1500 )
+
+}
+
+moveImg2();
+
+/*funcion para activar el movimiento vertical de la imagen del div MUSICA PARA CADA EVENTO al cargar la pagina */
+let img3 = document.querySelector(".container__suggest__item__img.eventos");
+
+function moveImg3() {
+
+    setTimeout ( () => {
+        img3.style.transform = "translateY(-5rem)";
+    }, 500 )
+
+    setTimeout ( () => {
+        img3.style.transform = "translateY(5rem)";
+    }, 1000 )
+
+    setTimeout ( () => {
+        img3.style.transform = "translateY(-0rem)";
+    }, 1500 )
+
+}
+
+moveImg3();
+
+
+/*funcion para activar el pop up al hacer click en el div LOS MAS POPULARES */
+let populares = document.querySelector(".container__pop__up__populares");
+let order1 = document.querySelector(".container__suggest__item.populares")
+
+function popupPopulares(){
+    actuaciones.classList.toggle("active__populares");
+    order1.style.order = 1;
+}
+
+popupPopulares();
+
+
+/*funcion para activar el pop up al hacer click en el div ULTIMAS INCORPORACIONES */
+let actuaciones = document.querySelector(".container__pop__up__actuaciones");
+let order2 = document.querySelector(".container__suggest__item.actuaciones")
 
 function popupActuaciones(){
     actuaciones.classList.toggle("active__actuaciones");
-    order1.classList.add("order__actuaciones");
+    order2.style.order = 1;
 }
 
-let eventos = document.querySelector(".container-pop-up__eventos");
-let order2 = document.querySelector(".container-suggest__item.eventos")
+popupActuaciones();
+
+
+/*funcion para activar el pop up al hacer click en el div MUSICA PARA CADA EVENTO */
+let eventos = document.querySelector(".container__pop__up__eventos");
+let order3 = document.querySelector(".container__suggest__item.eventos")
 
 function popupEventos(){
     eventos.classList.toggle("active__eventos");
-    order2.classList.add("order__eventos");
+    order3.style.order = 1;
 }
 
-
-
-
-// - Variables
-
-let sliderImg = document.querySelectorAll(".slider-img");
-// -- Guardamos en una variable todos los elementos img que darán como valor una array.
-
-let sliderInner = document.querySelector(".container-suggest__item__img");
-// -- Guardamos en una variable el contenedor de las imágenes para moverlo posteriormente.
-
-let sliderActual= 0;
-// -- Creamos una variable un contador del slider actual.
-
-// 2ª PARTE
-
-// - Funciones
-
-setInterval ( () => {
-// -- Creamos un intervalo con una función arrow.
-
-    while (sliderActual < sliderImg.length - 1) {
-    // --- Si el valor del slider actual es menor que la cantidad de img almacenadas en la variable -1:
-        sliderActual++;
-        // ---- Aumenta el valor del slider actual.
-        let calculo = sliderActual * -100;
-        // ---- Se declara una variable para hacer un cálculo que multiplique el slider actual por -100
-        sliderInner.style.transform = `translateX(${calculo}vw)`;
-        // ---- Modificamos el atributo style del contenedor de las imágenes agregandole un transform translateX con el valor de la variable anterior. Le añadimos la medida al final del resultado, por ejemplo vw.
-
-    }
-
-}, 5000) 
-// -- Le damos un tiempo de ejecución al intervalo, por ejemplo: 5000ms
-
-window.addEventListener('load', ()  => {
-    sliderActual = 1; 
-})
+popupEventos();

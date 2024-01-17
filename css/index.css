@@ -146,9 +146,9 @@ img {
     display: inline-block;
 }
 
-/*RESET*/
+/*fin RESET*/
 
-
+/*estilo de color y tipografia*/
 :root {
 
     --color--primary: #F28705;
@@ -193,7 +193,9 @@ h4 {
     font-variant: small-caps;
 }
 
-.container-nav {
+
+/*estilo de la cabecera*/
+.container__nav {
     width: 100%;
     max-height: 80px;
     align-items: center;
@@ -209,18 +211,18 @@ h4 {
     background-color: var(--main-dark);
 }
 
-.container-nav h1 {
+.container__nav h1 {
     display: flex;
 
     color: var(--color--tertiary);
 }
 
-.container-nav svg {
+.container__nav svg {
 
     color: var(--color--tertiary);
 }
 
-.container-tittle {
+.container__tittle {
 
     display: flex;
     flex-direction: row;
@@ -230,18 +232,18 @@ h4 {
 
 }
 
-.container-nav__item {
+.container__nav__item {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.container-nav svg {
+.container__nav svg {
     width: 24px;
     display: none;
 }
 
-.container-nav__item__icon {
+.container__nav__item__icon {
     width: 24px;
     float: right;
     flex-direction: column;
@@ -253,12 +255,14 @@ h4 {
     background-color: var(--color--tertiary);
 }
 
-.container-popup{
+
+/*estilo del menu desplegable*/
+.container__popup{
     display: none;
     transition: 2s ease-in-out;
 }
 
-.container-pop-up__item{
+.container__pop__up__item{
     width: 100%;
     background-color: var(--main-dark);
     display: flex;
@@ -271,17 +275,17 @@ h4 {
 
 
 
-.container-pop-up__item li svg {
+.container__pop__up__item li svg {
 
     width: 32px;
-    stroke: var(--main-light);
+    fill: var(--main-light);
 }
 
-.container-pop-up__item li svg:hover {
-    stroke: var(--color--tertiary);
+.container__pop__up__item li svg:hover {
+    fill: var(--color--tertiary);
 }
 
-.container-pop-up__item li:hover {
+.container__pop__up__item li:hover {
     color: var(--color--tertiary);
 }
 
@@ -292,6 +296,8 @@ h4 {
     width: 100vw;
 }
 
+
+/*estilo del div con el texto en movimiento*/
 .line1 {
     background-color: var(--color--primary); 
     height: 110px; 
@@ -307,6 +313,8 @@ h4 {
     font-weight: 300;
 }
 
+
+/*estilo de la pagina CONTRATA: div con el formulario de busqueda*/
 .line1.contrata {
     height: 140px;
     display: flex;
@@ -317,15 +325,17 @@ h4 {
 }
 
 
-.container-suggest {
+/*estilo de los 3 divs de sugerencias*/
+.container__suggest {
     width: 100%;
     height: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    background-color: var(--color--background1);
 }
 
-.container-suggest__item {
+.container__suggest__item {
     min-width: 350px;
     height: 100%;
     display: flex;
@@ -336,7 +346,19 @@ h4 {
     flex-grow: 1;
 }
 
-.container-suggest__item__tittle {
+.container__suggest__item.populares {
+    order: 1;
+}
+
+.container__suggest__item.actuaciones {
+    order: 2;
+}
+
+.container__suggest__item.eventos {
+    order: 3;
+}
+
+.container__suggest__item__tittle {
     width: 100%;
     min-height: 80px;
     display: flex;
@@ -345,61 +367,85 @@ h4 {
     align-items: center;
 }
 
-.container-suggest__item__tittle.populares {
+.container__suggest__item__tittle.populares {
     background-color: var(--color--tertiary);
     color: var(--color--background1);
 }
 
-.container-suggest__item__tittle.actuaciones, .container-suggest__item__tittle.musico1  {
+.container__suggest__item__tittle.actuaciones, .container__suggest__item__tittle.musico1  {
     background-color: var(--color--secondary); 
     color: var(--color--primary);
 }
 
-.container-suggest__item__tittle.eventos, .container-suggest__item__tittle.musico2  {
+.container__suggest__item__tittle.eventos, .container__suggest__item__tittle.musico2  {
     background-color: var(--color--background2); 
     color: var(--color--tertiary);
 }
 
-.container-suggest__item__img {
+.container__suggest__item__img {
     width: 100%;
     height: 100%;
     display: flex;
     overflow: hidden;
     flex-direction: row;
     flex-wrap: nowrap;
-    transform: translateX();
 
-    transition: 5s;
+    transition: all 1.5s;
 
 }
 
-.container-suggest__item__img.populares {
-    background-color: var(--color--background1);
-}
-
-.container-suggest__item__img.actuaciones {
-    background-color: var(--color--tertiary);
-}
-
-.container-suggest__item__img.eventos {
-    background-color: var(--color--primary);
-}
-
-.slider-img {
+.slider__img {
     width: 100%;
     width: 100%;
 }
 
-.container-pop-up__actuaciones {
+
+/*estilo de los pop ups de los 3 divs de sugerencias*/
+.container__pop__up__populares {
     display: none;
+    position: relative;
+}
+
+.active__populares {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.item__pop__up__populares ul {
+    max-width: 50%;
+    min-height: 220px;
+    background-color: var(--main-light);
+    list-style: none;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px 0px 0px 30px;
+    padding: 30px;
 
 }
 
-.close__actuaciones {
-    position: fixed;
-    top: 170px;
-    left: 1170px;
-    z-index: 100px;
+.item__pop__up__populares ul li h2 {
+    color: var(--color--background1);
+}
+
+.order__populares {
+    order: 0;
+}
+
+.container__pop__up__populares button {
+    color: var(--main-light);
+    background-color: var(--main-dark);
+    border-radius: 10px;
+}
+
+
+.container__pop__up__actuaciones {
+    display: none;
+    position: relative;
 }
 
 .active__actuaciones {
@@ -409,7 +455,7 @@ h4 {
     height: 100vh;
 }
 
-.item-pop-up__actuaciones ul {
+.item__pop__up__actuaciones ul {
     max-width: 50%;
     min-height: 220px;
     background-color: var(--main-light);
@@ -424,7 +470,7 @@ h4 {
 
 }
 
-.item-pop-up__actuaciones ul li h2 {
+.item__pop__up__actuaciones ul li h2 {
     color: var(--color--primary);
 }
 
@@ -432,23 +478,16 @@ h4 {
     order: 0;
 }
 
-.container-pop-up__actuaciones button {
+.container__pop__up__actuaciones button {
     color: var(--main-light);
     background-color: var(--main-dark);
     border-radius: 10px;
 }
 
 
-.container-pop-up__eventos {
+.container__pop__up__eventos {
     display: none;
     position: relative;
-}
-
-.close__eventos {
-    position: fixed;
-    top: 170px;
-    left: 1170px;
-    z-index: 100px;
 }
 
 .active__eventos {
@@ -458,7 +497,7 @@ h4 {
     height: 100vh;
 }
 
-.item-pop-up__eventos ul {
+.item__pop__up__eventos ul {
     max-width: 50%;
     min-height: 220px;
     background-color: var(--main-light);
@@ -473,23 +512,27 @@ h4 {
 
 }
 
-.order__eventos {
-    order: 2;
+.item__pop__up__eventos ul li h2 {
+    color: var(--color--tertiary);
 }
 
-.container-pop-up__eventos button {
+.container__pop__up__eventos button {
     color: var(--main-light);
     background-color: var(--main-dark);
     border-radius: 10px;
 }
 
+
+/*estilo del div decoratigo de separacion*/
 .line2 {
     background-color:var(--color--background1); 
     height: 30px; 
     width: 100%;
 }
 
-.container-filters {
+
+/*estilo del div con los dropdowns de busqueda*/
+.container__filters {
     width: 100%;
     min-height: 100px;
     background-color: var(--color--tertiary);
@@ -500,35 +543,47 @@ h4 {
     gap: 20px;
 }
 
-.container-filters form {
+.container__filters form {
     appearance: none;
     font-family: inherit;
 }
 
-.container-filters form button {
+.container__filters form button {
     background-color: var(--main-dark);
     color: var(--main-light);
     border-radius: 10px;
 }
 
-.container-filters__select {
+
+/*estilo de la pagina CONTRATA: boton del formulario de busqueda*/
+.line1.contrata button {
+    background-color: var(--main-dark);
+    color: var(--main-light);
+    border-radius: 10px;
+}
+
+
+/*CONTINUA estilo del div con los dropdowns de busqueda*/
+.container__filters__select {
     border: none;
     color: var(--main-dark);
     height: fit-content;
     background-color: var(--color--tertiary);
 }
 
-.container-filters__select option {
+.container__filters__select option {
     font-style: none;
     appearance: none;
     background-color: var(--main-light);
 }
 
-.container-filters__select option:hover {
+.container__filters__select option:hover {
     background-color: var(--main-dark);
 }
 
-.container-info {
+
+/*estilo del div con informacion de ayuda*/
+.container__info {
     width: 100%;
     height: 100%;
     display: flex;
@@ -537,7 +592,7 @@ h4 {
     align-items: center;
 }
 
-.container-info div {
+.container__info div {
     min-width: 350px;
     height: 100%;
     display: flex;
@@ -550,21 +605,23 @@ h4 {
     gap:15px;
 }
 
-.container-info .container-info__titlle {
+.container__info .container__info__titlle {
     background-color: var(--main-dark);
     color: var(--main-light);
     text-align: center;
 }
 
-.container-info .container-info__info-img {
+.container__info .container__info__info-img {
     background-color: var(--main-light);
     color: var(--main-dark);
 }
 
-.container-info .info-img {
+.container__info .info__img {
     width: 32px;
 }
 
+
+/*estilo del pie de pagina con 4 divs*/
 footer {
     width: 100%;
     height: 100%;
