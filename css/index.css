@@ -643,6 +643,7 @@ button:hover {
 .container__pop__up__regristro {
     width: 100vw;
     height: 100vh;
+    display: flex;
     position: fixed;
     top: 0;
     right: 0;
@@ -651,16 +652,27 @@ button:hover {
 }
 
 .item__pop__up__registro {
-    display: flex;
+    display: none;
+    flex-wrap: column wrap;
     position: absolute;
     top: 170px;
     right: 0;
     max-width: 350px;
-    min-height: 250px;
+    min-height: 350px;
     background-color: var(--main-light);
     padding: 10px;
     border-radius: 10px 0px 0 10px;
     align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+}
+
+.item__pop__up__registro li svg {
+    width: 32px;
+}
+
+.active__registro {
+    display: flex;
 }
 
 

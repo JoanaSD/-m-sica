@@ -125,7 +125,7 @@ popupEventos();
 let registro = document.querySelector(".container__pop__up__registro");
 
 function popupRegistro(){
-    registro.classList.toggle("active_registro");
+    registro.classList.toggle("active__registro");
 }
 
 popupRegistro();
