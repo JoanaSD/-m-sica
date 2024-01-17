@@ -294,6 +294,15 @@ h4 {
     position: fixed;
     top: 110px;
     width: 100vw;
+    z-index: 40;
+}
+
+.close1 {
+    transform: rotate(45deg);
+}
+
+.close2 {
+    transform: rotate(-45deg);
 }
 
 

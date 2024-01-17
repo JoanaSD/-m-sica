@@ -1,11 +1,21 @@
 /*funcion para activar el pop up del menu desplegable */
-let menu = document.querySelector(".container__popup");
-let menuIcon = document.querySelector(".container__nav__item")
+fetch('./components/header.html')
+.then(response => response.text())
+.then(data =>{
+	document.querySelector('header').innerHTML = data;
 
-function popup(){
-    menu.classList.toggle("active");
-    menuIcon.classList.toggle("close");
-}
+    let menu = document.querySelector(".container__popup");
+    let lineTop = document.querySelector(".container__nav__item__icon.top");
+    let lineBottom = document.querySelector(".container__nav__item__icon.bottom");
+
+    function popup() {
+        menu.classList.toggle("active");
+        lineTop.classList.toggle("close1");
+        lineBottom.classList.toggle("close2");
+    }
+
+})  
+
 
 
 /*funcion para activar el movimiento vertical de la imagen del div LOS MAS POPULARES al cargar la pagina */
