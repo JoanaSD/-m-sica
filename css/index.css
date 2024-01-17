@@ -146,6 +146,7 @@ img {
     display: inline-block;
 }
 
+
 /*fin RESET*/
 
 /*estilo de color y tipografia*/
@@ -193,6 +194,16 @@ h4 {
     font-variant: small-caps;
 }
 
+button {
+    color: var(--main-light);
+    background-color: var(--main-dark);
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: var(--color--primary);
+    border-color: var(--color--primary);
+}
 
 /*estilo de la cabecera*/
 .container__nav {
@@ -209,6 +220,7 @@ h4 {
     left: 0;
     right: 0;
     background-color: var(--main-dark);
+    z-index: 20;
 }
 
 .container__nav h1 {
@@ -292,7 +304,7 @@ h4 {
 .active {
     display: flex;
     position: fixed;
-    top: 110px;
+    top: 70px;
     width: 100vw;
     z-index: 40;
 }
@@ -355,6 +367,16 @@ h4 {
     flex-grow: 1;
 }
 
+/*estilo de la pagina CONTRATA: divs de sugerencias*/
+.container__suggest__item.contrata:hover .container__suggest__item__info {
+    background-color: var(--main-light);
+}
+
+.container__suggest__item__info {
+    padding: 15px;
+}
+
+/*CONTINUA estilo de los 3 divs de sugerencias*/
 .container__suggest__item.populares {
     order: 1;
 }
@@ -376,24 +398,24 @@ h4 {
     align-items: center;
 }
 
-.container__suggest__item__tittle.populares {
+.container__suggest__item__tittle.populares, .container__suggest__item__tittle.musico4, .container__info__info__img.conocenos.paso1 {
     background-color: var(--color--tertiary);
     color: var(--color--background1);
 }
 
-.container__suggest__item__tittle.actuaciones, .container__suggest__item__tittle.musico1  {
+.container__suggest__item__tittle.actuaciones, .container__suggest__item__tittle.musico1, .container__suggest__item__tittle.musico3, .container__suggest__item__tittle.musico5 {
     background-color: var(--color--secondary); 
     color: var(--color--primary);
 }
 
-.container__suggest__item__tittle.eventos, .container__suggest__item__tittle.musico2  {
+.container__suggest__item__tittle.eventos, .container__suggest__item__tittle.musico2, .container__suggest__item__tittle.musico6, .container__info__info__img.conocenos.paso2  {
     background-color: var(--color--background2); 
     color: var(--color--tertiary);
 }
 
 .container__suggest__item__img {
     width: 100%;
-    height: 100%;
+    max-height: 200px;
     display: flex;
     overflow: hidden;
     flex-direction: row;
@@ -445,12 +467,6 @@ h4 {
     order: 0;
 }
 
-.container__pop__up__populares button {
-    color: var(--main-light);
-    background-color: var(--main-dark);
-    border-radius: 10px;
-}
-
 
 .container__pop__up__actuaciones {
     display: none;
@@ -487,13 +503,6 @@ h4 {
     order: 0;
 }
 
-.container__pop__up__actuaciones button {
-    color: var(--main-light);
-    background-color: var(--main-dark);
-    border-radius: 10px;
-}
-
-
 .container__pop__up__eventos {
     display: none;
     position: relative;
@@ -525,14 +534,7 @@ h4 {
     color: var(--color--tertiary);
 }
 
-.container__pop__up__eventos button {
-    color: var(--main-light);
-    background-color: var(--main-dark);
-    border-radius: 10px;
-}
-
-
-/*estilo del div decoratigo de separacion*/
+/*estilo del div decorativo de separacion*/
 .line2 {
     background-color:var(--color--background1); 
     height: 30px; 
@@ -555,20 +557,6 @@ h4 {
 .container__filters form {
     appearance: none;
     font-family: inherit;
-}
-
-.container__filters form button {
-    background-color: var(--main-dark);
-    color: var(--main-light);
-    border-radius: 10px;
-}
-
-
-/*estilo de la pagina CONTRATA: boton del formulario de busqueda*/
-.line1.contrata button {
-    background-color: var(--main-dark);
-    color: var(--main-light);
-    border-radius: 10px;
 }
 
 
@@ -601,11 +589,88 @@ h4 {
     align-items: center;
 }
 
+
+/*estilo de la pagina CONOCENOS */
+.container__info.conocenos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-dark);
+
+}
+
+.container__info__titlle.conocenos {
+    width: 100%;
+}
+
+.container__info__info__img.conocenos {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    gap: 15px;
+}
+
+.container__info__info__img.conocenos.paso1 h4, .container__info__info__img.conocenos.paso2 h4 {
+    align-items: flex-start;
+}
+
+.container__info__info__img.conocenos:hover {
+    color: var(--main-dark);
+}
+
+
+
+/*estilo de la pagina SOY*/
+
+.container__info__titlle.conocenos.soy {
+    background-color: var(--color--primary);
+    color: var(--color--secondary);
+}
+
+.container__info__info.soy {
+    background-color: var(--color--primary);
+}
+
+.container__info__info__img.soy.empresa {
+    background-color: var(--color--background2);
+    color: var(--color--tertiary);
+}
+
+.container__pop__up__regristro {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__pop__up__registro {
+    display: flex;
+    position: absolute;
+    top: 170px;
+    right: 0;
+    max-width: 350px;
+    min-height: 250px;
+    background-color: var(--main-light);
+    padding: 10px;
+    border-radius: 10px 0px 0 10px;
+    align-items: center;
+}
+
+
+
+/*CONTINUA estilo del div con informacion de ayuda*/
 .container__info div {
     min-width: 350px;
     height: 100%;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     flex-basis: 0;

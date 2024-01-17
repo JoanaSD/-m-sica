@@ -1,20 +1,22 @@
-/*funcion para activar el pop up del menu desplegable */
-fetch('./components/header.html')
+/*footer */
+fetch('./components/footer.html')
 .then(response => response.text())
 .then(data =>{
-	document.querySelector('header').innerHTML = data;
-
-    let menu = document.querySelector(".container__popup");
-    let lineTop = document.querySelector(".container__nav__item__icon.top");
-    let lineBottom = document.querySelector(".container__nav__item__icon.bottom");
-
-    function popup() {
-        menu.classList.toggle("active");
-        lineTop.classList.toggle("close1");
-        lineBottom.classList.toggle("close2");
-    }
-
+	document.querySelector('footer').innerHTML = data;
 })  
+
+
+/*menu desplegable*/
+let menu = document.querySelector(".container__popup");
+let lineTop = document.querySelector(".container__nav__item__icon.top");
+let lineBottom = document.querySelector(".container__nav__item__icon.bottom");
+
+function popup() {
+    menu.classList.toggle("active");
+    lineTop.classList.toggle("close1");
+    lineBottom.classList.toggle("close2");
+}
+
 
 
 
@@ -46,15 +48,15 @@ let img2 = document.querySelector(".container__suggest__item__img.actuaciones");
 function moveImg2() {
 
     setTimeout ( () => {
-        img2.style.transform = "translateY(-5rem)";
+        img2.style.transform = "translateY(5rem)";
     }, 500 )
 
     setTimeout ( () => {
-        img2.style.transform = "translateY(5rem)";
+        img2.style.transform = "translateY(-5rem)";
     }, 1000 )
 
     setTimeout ( () => {
-        img2.style.transform = "translateY(-0rem)";
+        img2.style.transform = "translateY(0rem)";
     }, 1500 )
 
 }
@@ -83,9 +85,9 @@ function moveImg3() {
 moveImg3();
 
 
-/*funcion para activar el pop up al hacer click en el div LOS MAS POPULARES */
+/*funcion para activar el pop up y mover el div al primero al hacer click en el div LOS MAS POPULARES */
 let populares = document.querySelector(".container__pop__up__populares");
-let order1 = document.querySelector(".container__suggest__item.populares")
+let order1 = document.querySelector(".container__suggest__item.populares");
 
 function popupPopulares(){
     actuaciones.classList.toggle("active__populares");
@@ -95,9 +97,9 @@ function popupPopulares(){
 popupPopulares();
 
 
-/*funcion para activar el pop up al hacer click en el div ULTIMAS INCORPORACIONES */
+/*funcion para activar el pop up y mover el div al primero al hacer click en el div ULTIMAS INCORPORACIONES */
 let actuaciones = document.querySelector(".container__pop__up__actuaciones");
-let order2 = document.querySelector(".container__suggest__item.actuaciones")
+let order2 = document.querySelector(".container__suggest__item.actuaciones");
 
 function popupActuaciones(){
     actuaciones.classList.toggle("active__actuaciones");
@@ -107,9 +109,9 @@ function popupActuaciones(){
 popupActuaciones();
 
 
-/*funcion para activar el pop up al hacer click en el div MUSICA PARA CADA EVENTO */
+/*funcion para activar el pop up y mover el div al primero al hacer click en el div MUSICA PARA CADA EVENTO */
 let eventos = document.querySelector(".container__pop__up__eventos");
-let order3 = document.querySelector(".container__suggest__item.eventos")
+let order3 = document.querySelector(".container__suggest__item.eventos");
 
 function popupEventos(){
     eventos.classList.toggle("active__eventos");
@@ -117,3 +119,13 @@ function popupEventos(){
 }
 
 popupEventos();
+
+
+/*funcion para activar el pop up y mover el div al primero al hacer click en el div MUSICA PARA CADA EVENTO */
+let registro = document.querySelector(".container__pop__up__registro");
+
+function popupRegistro(){
+    registro.classList.toggle("active_registro");
+}
+
+popupRegistro();
