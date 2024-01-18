@@ -119,13 +119,3 @@ function popupEventos(){
 }
 
 popupEventos();
-
-
-/*funcion para activar el pop up y mover el div al primero al hacer click en el div MUSICA PARA CADA EVENTO */
-let registro = document.querySelector(".container__pop__up__registro");
-
-function popupRegistro(){
-    registro.classList.toggle("active__registro");
-}
-
-popupRegistro();
