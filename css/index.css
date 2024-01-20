@@ -739,8 +739,16 @@ footer div ul li h4{
     font-weight: 200;
 }
 
+footer div ul li h4:hover {
+    color: var(--main-dark);
+}
+
 footer div ul li svg {
     width: 32px;
+}
+
+footer div ul li svg:hover {
+    fill: var(--color--primary);
 }
 
 /*estilo página registro*/
