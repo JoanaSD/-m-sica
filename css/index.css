@@ -680,7 +680,7 @@ button:hover {
 /*CONTINUA estilo del div con informacion de ayuda*/
 .container__info div {
     min-width: 350px;
-    height: 100%;
+
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -775,4 +775,16 @@ footer div ul li svg:hover {
 
 .store__app__link:hover {
     background-color: var(--main-light);
+}
+
+.container__info div.conocenos {
+    min-width: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 30px;
+    gap:15px;
 }
