@@ -399,7 +399,7 @@ button:hover {
 }
 
 .container__suggest__item__tittle.populares, .container__suggest__item__tittle.musico4, .container__info__info__img.conocenos.paso1 {
-    background-color: var(--color--tertiary);
+    background-color: var(--color--primary);
     color: var(--color--background1);
 }
 
@@ -741,4 +741,30 @@ footer div ul li h4{
 
 footer div ul li svg {
     width: 32px;
+}
+
+/*estilo página registro*/
+.container__suggest.registro {
+    margin-top: 70px;
+}
+
+.container__info__info__img.registro {
+    padding: 16px;
+    text-align: center;
+}
+
+.store__app {
+    display: flex;
+    justify-content: space-around;
+}
+
+.store__app__link {
+    background-color: var(--color--primary);
+    color: var(--main-dark);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.store__app__link:hover {
+    background-color: var(--main-light);
 }
